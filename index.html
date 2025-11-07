@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porrêta Pizza - A Melhor Pizzaria de Mossoró</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Descubra o sabor autêntico da pizza artesanal na Porrêta Pizza. Cardápio variado, ingredientes frescos e delivery rápido em Mossoró. Peça agora!" />
+    <meta name="keywords" content="pizzaria, pizza, delivery, Porrêta Pizza, Mossoró, pizza artesanal, cardápio de pizza, pedir pizza" />
+    <meta name="author" content="Porrêta Pizza" />
+    <link rel="canonical" href="https://porretapizza.mossoro.br" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://porretapizza.mossoro.br/" />
+    <meta property="og:title" content="Porrêta Pizza - A Melhor Pizzaria de Mossoró" />
+    <meta property="og:description" content="Descubra o sabor autêntico da pizza artesanal na Porrêta Pizza. Cardápio variado, ingredientes frescos e delivery rápido em Mossoró. Peça agora!" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&h=630&auto=format&fit=crop" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://porretapizza.mossoro.br/" />
+    <meta property="twitter:title" content="Porrêta Pizza - A Melhor Pizzaria de Mossoró" />
+    <meta property="twitter:description" content="Descubra o sabor autêntico da pizza artesanal na Porrêta Pizza. Cardápio variado, ingredientes frescos e delivery rápido em Mossoró. Peça agora!" />
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&h=630&auto=format&fit=crop" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌵</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Psychology-driven palette: Warm, appetizing, and traditional.
+              'brand-yellow': '#FFC700', // Golden, like melted cheese
+              'brand-dark': '#2C2A2A',   // Warm charcoal, not cold black
+              'brand-light': '#FDF8E1',  // Creamy, like fresh dough
+              'brand-accent': '#D93B3B', // Rich tomato red
+              'brand-wood': '#4E342E',    // Deep, woody brown for texture
+            },
+            fontFamily: {
+              'sans': ['Poppins', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* Smooth, warm transitions for a non-robotic feel */
+        --transition-ease: cubic-bezier(0.65, 0, 0.35, 1);
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        background-color: #FDF8E1; /* Use the creamy base color */
+        padding-bottom: 80px; /* Space for the mobile nav bar */
+      }
+      
+      /* --- CORE TYPOGRAPHY - WARM & WELCOMING --- */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700; /* Bold and confident */
+        letter-spacing: -0.025em; /* Slightly tighter for impact */
+      }
+
+      /* --- PSYCHOLOGICAL KEYFRAME ANIMATIONS --- */
+      /* A gentle, warm "breathing" glow for primary CTAs to draw the eye */
+      @keyframes warm-glow {
+        0%, 100% { 
+          transform: scale(1); 
+          box-shadow: 0 0 20px rgba(255, 199, 0, 0.3), 0 0 10px rgba(217, 59, 59, 0.2); 
+        }
+        50% { 
+          transform: scale(1.03); 
+          box-shadow: 0 0 35px rgba(255, 199, 0, 0.5), 0 0 20px rgba(217, 59, 59, 0.3); 
+        }
+      }
+
+      /* Shimmering effect like heat haze or melted cheese */
+      @keyframes text-shine {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      
+      /* Gentle floating effect for cards, creating a sense of lightness */
+      @keyframes subtle-float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+
+      /* Blinking Cursor for Typewriter Effect - more subtle */
+      @keyframes blinking-cursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      
+      /* --- SCROLL-REVEAL SYSTEM (SMOOTH & ORGANIC) --- */
+      [data-animate] {
+        opacity: 0;
+        transition-property: opacity, transform;
+        transition-timing-function: var(--transition-ease);
+        transition-duration: 0.8s;
+        will-change: transform, opacity;
+      }
+      [data-animate="fade-up"] { transform: translate3d(0, 50px, 0); }
+      [data-animate="fade-left"] { transform: translate3d(-50px, 0, 0); }
+      [data-animate="fade-right"] { transform: translate3d(50px, 0, 0); }
+      [data-animate="zoom-in"] { transform: scale(0.9); transition-duration: 0.6s; }
+      [data-animate="card-reveal"] { transform: translate3d(0, 50px, 0) scale(0.95); }
+
+      [data-animate].is-visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+
+      /* --- COMPONENT-SPECIFIC ENHANCEMENTS: EVOKING HUNGER --- */
+      
+      /* IRRESISTIBLE CTA BUTTONS */
+      .btn-primary {
+        transition: all 0.3s var(--transition-ease);
+        transform-origin: center;
+      }
+      .btn-primary:hover {
+        transform: scale(1.05); /* Gentle impulse on hover */
+        filter: brightness(1.1);
+        box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2);
+      }
+
+      /* Apply glow only on larger screens for performance */
+      @media (min-width: 768px) {
+        .btn-glow-pulse {
+          animation: warm-glow 3.5s infinite ease-in-out;
+        }
+      }
+
+      /* APPETIZING TEXT SHINE */
+      .text-shine-effect {
+        background: linear-gradient(to right, #FFC700 20%, #FFFFFF 50%, #FFC700 80%);
+        background-size: 200% auto;
+        color: #000;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: text-shine 5s linear infinite;
+      }
+      h1.text-shine-effect {
+         background: linear-gradient(to right, #FFF 30%, #FFC700 50%, #FFF 70%);
+         background-size: 200% auto;
+         background-clip: text;
+         animation: text-shine 7s linear infinite;
+      }
+
+      /* PIZZA CARD HOVER EFFECT - Makes it feel special */
+      .card-float-hover:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px -12px rgba(217, 59, 59, 0.25), 0 15px 30px -10px rgba(255, 199, 0, 0.2);
+        animation: subtle-float 6s ease-in-out infinite;
+        animation-delay: -3s; /* Start animation mid-way */
+      }
+      
+      /* WARM INPUT FOCUS */
+      .input-premium:focus {
+        box-shadow: 0 0 0 3px rgba(255, 199, 0, 0.4), 0 0 30px rgba(217, 59, 59, 0.2);
+        border-color: #FFC700;
+      }
+
+      /* WARM, RUSTIC TEXTURES */
+      .bg-brand-dark.textured {
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+      }
+      .bg-brand-light, .bg-white {
+        background-image: url('https://www.transparenttextures.com/patterns/subtle-white-feathers.png');
+      }
+
+      /* TYPEWRITER CURSOR - Less robotic, more organic */
+      .blinking-cursor {
+        font-weight: 400;
+        color: #FFC700;
+        animation: blinking-cursor 1s step-end infinite;
+        display: inline-block;
+        transform: translateY(1px);
+        margin-left: 2px;
+      }
+      
+      /* HERO OVERLAY - Creates focus and a warm, oven-like feel */
+      .hero-overlay {
+        background-image: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(44,42,42,0.85) 90%);
+      }
+
+      /* --- MOBILE-FIRST RESPONSIVE STYLES --- */
+      .bottom-nav {
+        box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: rgba(44, 42, 42, 0.85);
+      }
+      .bottom-nav a {
+        transition: all 0.2s ease-in-out;
+      }
+      .bottom-nav a:active {
+        transform: scale(0.95);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+    "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
